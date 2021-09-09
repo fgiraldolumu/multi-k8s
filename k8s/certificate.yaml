@@ -1,0 +1,15 @@
+apiVersion: cert-manager.io/v1
+
+kind: Certificate
+metadata:
+  name: giraldolumu-com-tls
+spec:
+  secretName: giraldolumu-com
+  issuerRef:
+    name: letsencrypt-prod
+    kind: ClusterIssuer
+  commonName: giraldolumu.com
+  dnsNames:
+    - giraldolumu.com
+    - www.giraldolumu.com
+
